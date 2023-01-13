@@ -19,7 +19,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Users /> } />
         <Route path='/about' element={<About />} />
-        {/*<Route path='/api' element={<Api />} />*/}
+        <Route path='/api' element={<Api />} />
       </Routes>
     </div>
   )
