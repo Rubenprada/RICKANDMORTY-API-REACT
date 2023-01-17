@@ -1,3 +1,4 @@
+
 import React from 'react';
 import '../styles/App.css';
 import Header from './header/Header';
@@ -6,10 +7,7 @@ import Home from './home/Home';
 import Users from './users/login/Users';
 import { Route, Routes } from 'react-router-dom'; 
 import CallToApi from './CallToApi/CallToApi';
-
-
-
-
+import Footer from './footer/Footer';
 
 
 
@@ -19,8 +17,9 @@ function App() {
  
   
   return (
-    <div>
+    <div className='app__div'>
       <Header />
+      
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Users /> } />
@@ -29,9 +28,11 @@ function App() {
         <Route path="/api" element={<CallToApi />} />
         
       </Routes>
-    
-    
-    </div>
+
+
+      <Footer/>
+
+   </div>
   )
 };
 

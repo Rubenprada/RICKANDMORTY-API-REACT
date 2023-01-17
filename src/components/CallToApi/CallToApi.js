@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { json } from "react-router-dom";
@@ -48,4 +49,21 @@ function CallToApi ()  {
   )
 }
 
+import axios from "axios";
+import React from "react";
+import { useEffect } from "react";
+
+
+
+const CallToApi = () => {
+  useEffect(() => {
+    axios.get('https://rickandmortyapi.com/api/character')
+    .then((res) => {
+      console.log(res)
+    })
+  }, []);
+  return(
+    <div></div>
+  )
+}
 export default CallToApi;

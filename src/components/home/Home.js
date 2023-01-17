@@ -1,6 +1,10 @@
+import './home.scss'
+
 function Home () {
     return (
-        <h1>API DE RICK Y MORTY</h1>
+        <div className="home__div">
+            <p className="hove__div_h1">API DE RICK Y MORTY</p>
+        </div>
     )
 };
 
