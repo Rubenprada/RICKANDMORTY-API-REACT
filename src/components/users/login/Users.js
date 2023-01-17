@@ -11,7 +11,7 @@ import Profile from './Profile';
 import Login from './Login';
 import { useState } from 'react';
 
-
+import CallToApi from '../../CallToApi/CallToApi';
 
 function Users() {
   
@@ -50,6 +50,7 @@ function Users() {
         {user.name ? (
           <>
             <Profile />
+            <CallToApi/>
             <h1>link para la api</h1>
           </>
         ) : null}
