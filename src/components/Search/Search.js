@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Buscador = props => {
-	const handleChange = eve => {
+const Buscador = (props) => {
+	const handleChange = (eve) => {
 		props.searchData(eve.target.value);
 	};
 

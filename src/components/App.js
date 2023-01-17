@@ -24,12 +24,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Users /> } />
         <Route path='/about' element={<About />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/api" element={<CallToApi />} />
-        
+        <Route path="/api" element={<CallToApi />} /> 
       </Routes>
-
-
       <Footer/>
 
    </div>
