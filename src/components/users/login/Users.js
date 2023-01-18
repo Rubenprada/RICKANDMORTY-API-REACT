@@ -52,7 +52,7 @@ function Users() {
             <Profile />
 
             <CallToApi/>
-            <h1>link para la api</h1>
+          
 
           </>
         ) : null}
