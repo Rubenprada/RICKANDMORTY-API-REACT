@@ -1,8 +1,10 @@
 import React from 'react';
 
+
 const Buscador = props => {
 	const handleChange = e => {
 		props.searchData(e.target.value);
+
 	};
 
 	return (

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 //importamos los datos del json
 import data from '../../data/data.json';
-
+import './login.scss'
 
 
 //prop de Users ---> handleUser y setError
@@ -26,14 +26,15 @@ function Login({handleUser, setError}) {
         const foundUser = data.find((item) => item.username === userLogin.username && item.password === userLogin.password);
         //ternario en el que si el ususario no es correcto ponga un error
         foundUser ? handleUser(foundUser) : setError('Usuario o clave incorrecta')
-    }
+    } 
+    
     return (
         
             <form action="" className="form">
-                <label htmlFor="user">Usuario</label>
-                <input type="text" id="user" onChange={handleChange} name='username'/>
-                <label htmlFor="pass">Contraseña</label>
-                <input type="password" id="pass" onChange={handleChange} name='password'/>
+                <label className="form__label1" htmlFor="user">Usuario</label>
+                <input className="form__input" type="text" placeholder="usuario" id="user" onChange={handleChange} name='username'/><br></br>
+                <label className="form__label2" htmlFor="pass">Contraseña</label>
+                <input type="password" placeholder="contraseña" id="pass" onChange={handleChange} name='password'/><br></br>
                 <input type="button" value='login' onClick={handleClick} className='button'/>
             </form>
         
