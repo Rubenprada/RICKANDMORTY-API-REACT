@@ -15,6 +15,7 @@ import Error from './error/Error';
 
 
 
+
 function App() {
   return (
     <div className="app__div">
@@ -25,7 +26,10 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Users /> } />
         <Route path='/about' element={<About />} />
-        <Route path="/api" element={<CallToApi />} /> 
+        <Route path='/api' element={<CallToApi />} /> 
+        
+       
+
         <Route path='/*' element={<Error/>} />
       </Routes>
       <Footer/>

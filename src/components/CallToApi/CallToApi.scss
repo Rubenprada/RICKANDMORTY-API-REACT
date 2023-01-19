@@ -1,4 +1,5 @@
 .container {
+  //
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -34,8 +35,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 300px;
-  height: 90%;
+  width: 320px;
+    height: 90%;
+  
   background-color: #f5f5f5;
   padding: 1px;
   box-sizing: border-box;

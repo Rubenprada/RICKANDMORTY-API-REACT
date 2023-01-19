@@ -17,12 +17,8 @@ function Profile () {
         <div>  
             <h2>Nombre: {user.name}</h2>
             <p>Usuario: {user.username}</p>
-
             <img src={user.url} alt="avatar" />
-          
-
-           
-        </div>
+         </div>
     )
 };
 

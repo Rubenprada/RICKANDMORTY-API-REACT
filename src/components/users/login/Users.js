@@ -11,8 +11,10 @@ import { useEffect } from 'react';
 //importamos el componente para logearse
 import Login from './Login';
 import { useState } from 'react';
+import CallApi from '../../CallToApi/CallToApi';
 
-import CallToApi from '../../CallToApi/CallToApi';
+
+
 
 function Users() {
   
@@ -57,7 +59,8 @@ function Users() {
         {user.name ? (
           <>
             <Profile />
-            <CallToApi/>
+            <CallApi />
+           
 
           </>
         ) : null}
