@@ -14,11 +14,11 @@ function LogOut ({ handleUser, setError}) {
         handleUser({});
         setError('Se ha cerrado correctamente la sesión')
     }
+    
     //Ternario en el que si no hay nombre de usuario, se genera un div
     //con enlace para que inicie sesión
     return user.name ? (
         <div>
-            <div>Bienvenido {user.name}</div>
             <input  value='cerrar sesión' type="submit" onClick={loginOut}/>
         </div>
     ) : (

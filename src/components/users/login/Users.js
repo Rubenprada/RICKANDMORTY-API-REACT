@@ -5,6 +5,7 @@ import UserContext from '../../../context/userContext';
 import LogOut from './LogOut';
 //import componente Profile
 import Profile from './Profile';
+import { useEffect } from 'react';
 
 
 //importamos el componente para logearse
@@ -25,20 +26,26 @@ function Users() {
   const handleUser = (value) => {
     setUser(value)
   };
+  //elimina los mensajes de error
+  useEffect(() => {
+    setTimeout(() => {
+        setError()
+    }, 3000)
+  })
 
   return (
     <>
     {/*si no hay ususario logeado muestra el login, si existe ususario logeado no muestra nada*/}
       
       
-      
+      <p>{error}</p>
       {!user.name ? (
         <Login
           handleUser={handleUser}
           setError={setError}
         />
       ) : null }
-      <p>{error}</p>
+      
       
       {/*le damos el contexto del user a el header */}
       <UserContext.Provider value={user}>
@@ -50,10 +57,7 @@ function Users() {
         {user.name ? (
           <>
             <Profile />
-
             <CallToApi/>
-            <h1>link para la api</h1>
-
           </>
         ) : null}
       </UserContext.Provider>

@@ -4,17 +4,13 @@
 }
 
 .home__div {
-  background-image: url(../../assets/fondo2.jpeg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: contain;
   height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: black;
 }
-.hove__div_h1 {
-  
+.hove__div_h1{
+  height: 200px;
 }
 /*# sourceMappingURL=home.css.map */

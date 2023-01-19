@@ -14,11 +14,9 @@ function Profile () {
     //mandamos las props de user, con userContext
     const user = useContext(UserContext);
     return (
-        <div>
-       
+        <div>  
             <h2>Nombre: {user.name}</h2>
             <p>Usuario: {user.username}</p>
-            <img src={user.url} alt="avatar" />
             <Buscador/>
             <CallToApi/>
            
