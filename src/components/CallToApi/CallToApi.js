@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './CallToApi.scss';
 
 import Character   from '../Characters/Characters';
 import Buscador from '../Search/Search';
