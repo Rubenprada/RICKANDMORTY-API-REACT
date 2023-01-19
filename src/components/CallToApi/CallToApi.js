@@ -57,7 +57,7 @@ function CallApi(){
 	return (
 		<div className="container">
 			<h1 className="title">Rick and Morty</h1>
-			<Buscador searchData={searchData} />
+			<Buscador className="Buscador" searchData={searchData} />
 			<Character character={characters} prevPage={prevPage} nextPage={nextPage} page={page} />
 		</div>
 	);
