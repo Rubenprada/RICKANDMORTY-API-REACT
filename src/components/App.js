@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import '../styles/App.css';
 import Header from './header/Header';
@@ -13,15 +14,14 @@ import Error from './error/Error';
 
 
 
-function App() {
 
- 
-  
+function App() {
   return (
-    <div className='app__div'>
+    <div className="app__div">
       <Header />
-      
+
       <Routes>
+
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Users /> } />
         <Route path='/about' element={<About />} />
@@ -35,6 +35,7 @@ function App() {
 };
 
   
+
 
 
 export default App;

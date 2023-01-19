@@ -1,51 +1,68 @@
+import React, { useState, useEffect } from 'react';
+import './CallToApi.scss';
 
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { json } from "react-router-dom";
+import Character   from '../Characters/Characters';
+import Buscador from '../Search/Search';
 
-function CallToApi ()  {
-  const [listCharacter, setListCharacter] = useState([]);
-  const [next, setNext] = useState("");
+function CallApi(){
+	let urlCharacters = `https://rickandmortyapi.com/api/character/`;
+	let dataURL = {
+		info: {},
+		character: [],
+		error: '',
+	};
 
+	const [ characters, setCharacters ] = useState(dataURL);
+	const [ ulr, setURL ] = useState(urlCharacters);
+	const [ page, setPage ] = useState(1);
 
-  useEffect(() => {
-    axios
-      .get("https://rickandmortyapi.com/api/character")
-      .then((response) => response, json())
-      .then((res) => {
-        setListCharacter(res.data.results);
-        setNext(res.data.info.next);
-       
-      });
-      }, []);
- 
-  const handleClick = (ev) => {
-    axios.get(next).then((res) => {
-      setListCharacter(res.data.results);
-      setNext(res.data.info.next);
-    });
-  };
+	useEffect(
+		() => {
+			const fetchAPI = () => {
+				fetch(ulr)
+					.then(res => res.json())
+					.then(data => setCharacters({ character: data.results, info: data.info, error: data.error }))
+					.catch(error => console.log(error));
+			};
+			fetchAPI();
+		},
+		[ ulr ]
+	);
 
+	const nextPage = () => {
+		setURL(characters.info.next);
+		setPage(page + 1);
+		scroll();
+	};
 
+	const prevPage = () => {
+		if (characters.info.prev != null) {
+			setURL(characters.info.prev);
+			setPage(page - 1);
+			scroll();
+		}
+	};
 
-  
+	const scroll = () => {
+		const elemento = document.querySelector('.container');
+		elemento.scrollIntoView('auto', 'start');
+	};
 
+	const searchData = data => {
+		urlCharacters = `https://rickandmortyapi.com/api/character/?name=${data}`;
+		setURL(urlCharacters);
+		setPage(1);
+	};
 
-  return (
-    <div className="api">
-      <button onClick={handleClick}>Next</button>
-
-      <ul>
-        {listCharacter.map((character) => {
-          return (
-            <li key={character.id}>
-              <h2>{character.name}</h2>
-              <img src={character.image} alt={character.name} />
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  )
+	return (
+		<div className="container">
+			<h1 className="title">Rick and Morty</h1>
+			<Buscador className="Buscador" searchData={searchData} />
+			<Character character={characters} prevPage={prevPage} nextPage={nextPage} page={page} />
+		</div>
+	);
 }
-export default CallToApi;
+
+
+export default CallApi;
+
