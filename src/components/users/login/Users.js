@@ -6,12 +6,12 @@ import LogOut from './LogOut';
 //import componente Profile
 import Profile from './Profile';
 import { useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 
 //importamos el componente para logearse
 import Login from './Login';
 import { useState } from 'react';
-import CallApi from '../../CallToApi/CallToApi';
+import './user.scss';
 
 
 
@@ -51,18 +51,20 @@ function Users() {
       
       {/*le damos el contexto del user a el header */}
       <UserContext.Provider value={user}>
-        <LogOut 
-          handleUser={handleUser}
-          setError={setError}
-        />
         {/*si hay usuario logeado muestra el perfil, si no, no muestra nada*/}
         {user.name ? (
-          <>
-            <Profile />
-            <CallApi />
-           
-
-          </>
+          <div className='user__div'>
+            <Profile />          
+            <Link to='/api'>
+              <div className='user__div_div'>
+                <button className="user__div_button">API</button>
+              </div>
+            </Link>        
+            <LogOut 
+            handleUser={handleUser}
+            setError={setError}
+        />
+          </div>
         ) : null}
       </UserContext.Provider>
     </>

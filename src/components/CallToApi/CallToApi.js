@@ -60,8 +60,10 @@ function CallApi(){
 			<Buscador className="Buscador" searchData={searchData} />
 			<Character character={characters} prevPage={prevPage} nextPage={nextPage} page={page} />
 			
-			
+		
 		</div>
+			
+		
 	);
 }
 

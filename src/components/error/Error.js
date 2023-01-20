@@ -1,6 +1,9 @@
+import './error.scss';
+
+
 function Error () {
     return (
-        <p>Ruta desconocida</p>
+        <h2 className="error">Ruta desconocida</h2>
     )
 };
 

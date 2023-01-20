@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 //importamos el componente de los usuarios
 import UserContext from "../../../context/userContext";
 
+import './logout.scss'
 
 //mandamos por props al usuario y el error
 function LogOut ({ handleUser, setError}) {
@@ -18,8 +19,8 @@ function LogOut ({ handleUser, setError}) {
     //Ternario en el que si no hay nombre de usuario, se genera un div
     //con enlace para que inicie sesión
     return user.name ? (
-        <div>
-            <input  value='cerrar sesión' type="submit" onClick={loginOut}/>
+        <div className="logout__div">
+            <input className="logout__input" value='cerrar sesión' type="submit" onClick={loginOut}/>
         </div>
     ) : (
         <div></div>
