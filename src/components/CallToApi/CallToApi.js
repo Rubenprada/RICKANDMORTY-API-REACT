@@ -3,6 +3,7 @@ import './CallToApi.scss';
 
 import Character   from '../Characters/Characters';
 import Buscador from '../Search/Search';
+import DetailView from '../detailView/DetailView';
 
 function CallApi(){
 	let urlCharacters = `https://rickandmortyapi.com/api/character/`;
@@ -15,7 +16,7 @@ function CallApi(){
 	const [ characters, setCharacters ] = useState(dataURL);
 	const [ ulr, setURL ] = useState(urlCharacters);
 	const [ page, setPage ] = useState(1);
-
+	
 	useEffect(
 		() => {
 			const fetchAPI = () => {
@@ -60,7 +61,6 @@ function CallApi(){
 			<Buscador className="Buscador" searchData={searchData} />
 			<Character character={characters} prevPage={prevPage} nextPage={nextPage} page={page} />
 			
-		
 		</div>
 			
 		

@@ -10,27 +10,26 @@ import { Route, Routes } from 'react-router-dom';
 import CallToApi from './CallToApi/CallToApi';
 import Footer from './footer/Footer';
 import Error from './error/Error';
-
+import DetailView from './detailView/DetailView';
 
 
 
 
 
 function App() {
+  
   return (
     <div className="app__div">
       <Header />
-
       <Routes>
 
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Users /> } />
         <Route path='/about' element={<About />} />
         <Route path='/api' element={<CallToApi />} /> 
-        
-       
+        <Route path= '/api/:id' element={<DetailView />} />
 
-        <Route path='/*' element={<Error/>} />
+        <Route path='*' element={<Error/>} />
       </Routes>
       <Footer/>
 
