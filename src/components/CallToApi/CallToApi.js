@@ -3,7 +3,8 @@ import './CallToApi.scss';
 
 import Character   from '../Characters/Characters';
 import Buscador from '../Search/Search';
-import DetailView from '../detailView/DetailView';
+
+
 
 function CallApi(){
 	let urlCharacters = `https://rickandmortyapi.com/api/character/`;
@@ -35,6 +36,7 @@ function CallApi(){
 		setPage(page + 1);
 		scroll();
 	};
+	
 
 	const prevPage = () => {
 		if (characters.info.prev != null) {

@@ -5,14 +5,11 @@ import Paginations from "../Paginations/Paginations";
 
 
 import { Link } from "react-router-dom";
-import { useState } from "react";
+
 
 const Characters = (props) => {
-  console.log(props)
-  const { character, info } = props.character;
-  let page = props.page;
-  console.log(page)
   
+  const { character, info } = props.character;
   
   const statusCharacter = (status) => {
     if (status === "Alive") {
@@ -34,8 +31,8 @@ const Characters = (props) => {
           <div className="characters">
             {character.map((character, index) => (
               
-              <div className="character" key={index} id={index} page={page}>
-                <Link to={`/api/${index}${page}`}>
+              <div className="character" key={index} id={index} >
+                <Link to={`/api/${index+1}`}>
                 
                 <div className="image">
                   <img className="img" src={character.image} alt={character.name} />

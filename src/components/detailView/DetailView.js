@@ -3,21 +3,20 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const DetailView = () => {
-  //queda por arreglar el enrutado dinamico que hay en character y aqui
-  const { id, page} = useParams();
   
-  
+  let { id } = useParams();
+  console.log(id)
 
   let [person, setPerson] = useState([]);
+  
+  
 
-
-  let api = `https://rickandmortyapi.com/api/character/${id}`;
-
+  let api = `https://rickandmortyapi.com/api/character/${id}`
   useEffect(() => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
       setPerson(data);
-      console.log(data)
+     
     })();
   }, [api]);
   return (
