@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './CallToApi.scss';
 
-import Character   from '../Characters/Characters';
+import Characters   from '../Characters/Characters';
 import Buscador from '../Search/Search';
+
 
 function CallApi(){
 	let urlCharacters = `https://rickandmortyapi.com/api/character/`;
@@ -58,7 +59,9 @@ function CallApi(){
 		<div className="container">
 			<h1 className="title">Rick and Morty</h1>
 			<Buscador className="Buscador" searchData={searchData} />
-			<Character character={characters} prevPage={prevPage} nextPage={nextPage} page={page} />
+			<Characters character={characters} prevPage={prevPage} nextPage={nextPage} page={page} />
+			
+			
 			
 		
 		</div>

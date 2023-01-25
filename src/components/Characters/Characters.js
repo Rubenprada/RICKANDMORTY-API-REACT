@@ -14,6 +14,7 @@ const Characters = (props) => {
     }
   };
 
+
   return (
     <React.Fragment>
       {character !== undefined ? (
@@ -49,7 +50,14 @@ const Characters = (props) => {
       ) : (
         <React.Fragment>
           <article className="articleNull">
-            <h2>No hay personajes</h2>
+            <h2>No hay personajes con el nombre que buscaste, intenta
+              con otro nombre.</h2>
+
+            <div className= "return">
+              <a href="/api">Volver</a>
+           </div>
+
+
           </article>
         </React.Fragment>
       )}

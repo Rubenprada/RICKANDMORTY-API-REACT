@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Personage = ({ id }) => {
+const Character = ({ id }) => {
 	let urlCharacters = `https://rickandmortyapi.com/api/character/${id}`;
 	const [ character, setCharacter ] = useState({});
 
@@ -40,4 +40,4 @@ const Personage = ({ id }) => {
 	);
 };
 
-export default Personage;
+export default Character;
