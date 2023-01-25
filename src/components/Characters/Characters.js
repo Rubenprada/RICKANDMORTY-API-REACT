@@ -1,9 +1,19 @@
 import React from "react";
+
 import Paginations from "../Paginations/Paginations";
 
-const Characters = (props) => {
-  const { character, info } = props.character;
 
+
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
+const Characters = (props) => {
+  console.log(props)
+  const { character, info } = props.character;
+  let page = props.page;
+  console.log(page)
+  
+  
   const statusCharacter = (status) => {
     if (status === "Alive") {
       return <span className="alive">🟢</span>;
@@ -16,12 +26,18 @@ const Characters = (props) => {
 
 
   return (
+    
     <React.Fragment>
+      
       {character !== undefined ? (
         <React.Fragment>
+          
           <div className="characters">
             {character.map((character, index) => (
-              <div className="character" key={index} id={index}>
+              
+              <div className="character" key={index} id={index} page={page}>
+                <Link to={`/api/${index}${page}`}>
+                
                 <div className="image">
                   <img className="img" src={character.image} alt={character.name} />
                 </div>
@@ -36,7 +52,9 @@ const Characters = (props) => {
                     <span> {character.origin.name}</span>
                   </p>
                 </div>
+                </Link>
               </div>
+              
             ))}
           </div>
           {info.pages > 1 ? (
@@ -61,6 +79,7 @@ const Characters = (props) => {
           </article>
         </React.Fragment>
       )}
+      
     </React.Fragment>
   );
 };

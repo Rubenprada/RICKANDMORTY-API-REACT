@@ -3,6 +3,7 @@ import './CallToApi.scss';
 
 import Characters   from '../Characters/Characters';
 import Buscador from '../Search/Search';
+import DetailView from '../detailView/DetailView';
 
 
 function CallApi(){
@@ -16,7 +17,7 @@ function CallApi(){
 	const [ characters, setCharacters ] = useState(dataURL);
 	const [ ulr, setURL ] = useState(urlCharacters);
 	const [ page, setPage ] = useState(1);
-
+	
 	useEffect(
 		() => {
 			const fetchAPI = () => {
@@ -63,7 +64,6 @@ function CallApi(){
 			
 			
 			
-		
 		</div>
 			
 		
