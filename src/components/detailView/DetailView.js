@@ -28,7 +28,7 @@ const DetailView = () => {
       <p>Genero: {person.gender}</p>
       <p>Estado: {person.status}</p>
       <p>Especie: {person.species}</p>
-      <Link to='/api'><button>API</button></Link>
+      <Link to='/api'><button>ATRAS</button></Link>
     </div>
   );
 };

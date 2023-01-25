@@ -1,11 +1,6 @@
 .footer {
-  background-color: black;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.footer__p {
-  color: whitesmoke;
 }/*# sourceMappingURL=footer.css.map */

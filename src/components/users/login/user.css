@@ -1,0 +1,14 @@
+.user__div {
+  text-align: center;
+}
+
+.user__div_button {
+  margin-top: 40px;
+  background-color: rgba(0, 0, 0, 0.911);
+  color: white;
+}
+
+.user__div_div {
+  background-color: rgba(0, 0, 0, 0.911);
+  padding-top: 20px;
+}/*# sourceMappingURL=user.css.map */

@@ -3,7 +3,7 @@ import './CallToApi.scss';
 
 import Characters   from '../Characters/Characters';
 import Buscador from '../Search/Search';
-import DetailView from '../detailView/DetailView';
+
 
 
 function CallApi(){

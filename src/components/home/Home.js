@@ -1,5 +1,5 @@
 import './home.scss'
-import logo from '../../assets/logo.jpeg'
+import logo from '../../assets/error1.jpg'
 
 function Home () {
     return (

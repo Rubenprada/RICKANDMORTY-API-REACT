@@ -5,7 +5,7 @@ import Paginations from "../Paginations/Paginations";
 
 
 import { Link } from "react-router-dom";
-import { useState } from "react";
+
 
 const Characters = (props) => {
   console.log(props)
@@ -23,7 +23,6 @@ const Characters = (props) => {
       return <span className="unknown">🟡</span>;
     }
   };
-
 
   return (
     
@@ -68,14 +67,7 @@ const Characters = (props) => {
       ) : (
         <React.Fragment>
           <article className="articleNull">
-            <h2>No hay personajes con el nombre que buscaste, intenta
-              con otro nombre.</h2>
-
-            <div className= "return">
-              <a href="/api">Volver</a>
-           </div>
-
-
+            <h2>No hay personajes</h2>
           </article>
         </React.Fragment>
       )}

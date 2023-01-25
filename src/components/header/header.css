@@ -7,9 +7,7 @@
   padding: 20px;
   display: flex;
   justify-content: space-around;
-  border-bottom: 2px grey solid;
   height: 10%;
-  background-color: rgb(112, 193, 255);
 }
 
 .header__ul_li {
@@ -23,6 +21,7 @@
   background-color: black;
   width: 50px;
   height: 25px;
+  border-radius: 15px;
 }
 
 .header__ul_li2:hover {

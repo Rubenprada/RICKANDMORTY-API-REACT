@@ -1,14 +1,4 @@
-import React from "react";
-import "../styles/App.css";
-import Header from "./header/Header";
-import About from "./about/About";
-import Home from "./home/Home";
-import Users from "./users/login/Users";
-import { Route, Routes } from "react-router-dom";
-import CallToApi from "./CallToApi/CallToApi";
-import Footer from "./footer/Footer";
-import Error from "./error/Error";
-import Back from "./error/Error";
+
 
 
 import React from 'react';
@@ -22,11 +12,12 @@ import CallToApi from './CallToApi/CallToApi';
 import Footer from './footer/Footer';
 import Error from './error/Error';
 import DetailView from './detailView/DetailView';
+import Back from "./error/Error";
 
 
 
 
-import Personaje from "../components/character/character";
+
 
 function App() {
   
@@ -46,7 +37,7 @@ function App() {
         <Route path="/login" element={<Users />} />
         <Route path="/about" element={<About />} />
         <Route path="/api" element={<CallToApi />} />
-        <Route path="/characters" element={<Personaje />} />
+      
         <Route path="/api" element={<Back/>} />	
 
         <Route path="/*" element={<Error />} />
