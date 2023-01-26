@@ -32,7 +32,7 @@ const Characters = (props) => {
             {character.map((character, index) => (
               
               <div className="character" key={index} id={index} >
-                <Link to={`/api/${index+1}`}>
+                <Link to={`/api/${character.id}`}>
                 
                 <div className="image">
                   <img className="img" src={character.image} alt={character.name} />
