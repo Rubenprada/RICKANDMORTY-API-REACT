@@ -34,8 +34,8 @@ function Login({handleUser, setError}) {
                 <label className="form__label1" htmlFor="user">Usuario</label>
                 <input className="form__input" type="text" placeholder="usuario" id="user" onChange={handleChange} name='username'/><br></br>
                 <label className="form__label2" htmlFor="pass">Contraseña</label>
-                <input type="password" placeholder="contraseña" id="pass" onChange={handleChange} name='password'/><br></br>
-                <input type="button" value='login' onClick={handleClick} className='button'/>
+                <input className= 'password' type="password" placeholder="contraseña" id="pass" onChange={handleChange} name='password'/><br></br>
+                <input type="button" value='Login' onClick={handleClick} className='button'/>
             </form>
         
     )

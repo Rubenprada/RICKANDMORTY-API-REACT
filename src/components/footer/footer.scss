@@ -1,6 +1,46 @@
 .footer {
+   
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.footer__p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.footer__a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  
+   
+}
+
+.footer__a:hover{
+    color: #20e47f;
+    text-decoration: none;
+}
+
+.footer__b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  
+   
+   
+}
+
+.footer__b:hover{
+    color: #20e47f;
+    text-decoration: none;
 }

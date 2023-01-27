@@ -4,25 +4,42 @@
 }
 
 .header__ul {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-around;
-  height: 10%;
+
+
+  
+  height: 55px;
+  font-family: Get Schwifty ;
+  font-size: 40px;
+  background-image: linear-gradient(5deg, #adf070 0, #95ea6d 16.67%, #7ae169 33.33%, #56d663 50%, #1ecb5f 66.67%, #00c25e 83.33%, #00bb60 100%);
+
+
+ 
   
 }
 
 .header__ul_li {
   text-decoration: none;
-  color: black;
+  color: rgb(13, 114, 42);
+  font-size: 40px;
+  
+  -webkit-text-stroke: 1px rgb(12, 12, 12);
+  
 }
 
 .header__ul_li2 {
   text-decoration: none;
   color: whitesmoke;
-  background-color: black;
-  width: 50px;
-  height: 25px;
-  border-radius: 15px;
+  background-color: rgb(17, 130, 68);
+  width: 130px;
+  height: 60px;
+  border-radius: 20px;
+  font-family: Get Schwifty ;
+  font-size: 30px;
+  text-align: center;
+  background-image: linear-gradient(5deg, #adf070 0, #95ea6d 16.67%, #7ae169 33.33%, #56d663 50%, #1ecb5f 66.67%, #00c25e 83.33%, #00bb60 100%);
 }
 
 .header__ul_li2:hover {

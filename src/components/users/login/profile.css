@@ -1,0 +1,18 @@
+.profile__div {
+  background-color: rgba(3, 3, 3, 0.911);
+  height: 600px;
+  text-align: center;
+}
+
+.profile__div_p {
+  color: white;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.profile__div_img {
+  width: 40%;
+  padding-top: 20px;
+  margin: auto;
+  border-radius: 100%;
+}/*# sourceMappingURL=profile.css.map */

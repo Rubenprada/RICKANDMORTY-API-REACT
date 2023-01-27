@@ -1,4 +1,5 @@
 import React from 'react';
+import './Paginations.scss';
 
 const Paginations = props => {
 	return (
@@ -7,7 +8,7 @@ const Paginations = props => {
 				<button className="btn" onClick={props.prevPage}>
 					Prev
 				</button>
-				<button className="btn" onClick={props.nextPage}>
+				<button className="btn1" onClick={props.nextPage}>
 					Next
 				</button>
 			</div>
