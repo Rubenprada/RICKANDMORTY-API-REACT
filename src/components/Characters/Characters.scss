@@ -2,3 +2,20 @@
     text-decoration: none;
 }
 
+.h2__error{
+   
+    color: rgb(7, 15, 11);
+    font-size: 2rem;
+    font-weight: 600px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+
+}
+
+.articleNull{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+}
