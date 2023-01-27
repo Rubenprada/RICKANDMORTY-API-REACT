@@ -4,33 +4,30 @@ import { Link } from "react-router-dom";
 import "./DetailView.scss";
 
 const DetailView = () => {
-  
   let { id } = useParams();
-  console.log(id)
+  console.log(id);
 
   let [person, setPerson] = useState([]);
-  
-  
 
-  let api = `https://rickandmortyapi.com/api/character/${id}`
+  let api = `https://rickandmortyapi.com/api/character/${id}`;
   useEffect(() => {
     (async function () {
       let data = await fetch(api).then((res) => res.json());
       setPerson(data);
-     
     })();
   }, [api]);
   return (
     <div className="div__detail">
-      
-      <img className= 'img__detail' src={person.image} alt="" />
+      <img className="img__detail" src={person.image} alt="" />
       <div className="detail">
-      <p>Nombre: {person.name}</p>
-      <p className='detail__gen'>Genero: {person.gender}</p>
-      <p>Estado: {person.status}</p>
-      <p>Especie: {person.species}</p>
+        <p>Nombre: {person.name}</p>
+        <p className="detail__gen">Genero: {person.gender}</p>
+        <p>Estado: {person.status}</p>
+        <p>Especie: {person.species}</p>
       </div>
-      <Link className="link__detail" to='/api'><button className="button__detail"> VOLVER A API</button></Link>
+      <Link className="link__detail" to="/api">
+        <button className="button__detail"> VOLVER A API</button>
+      </Link>
     </div>
   );
 };
