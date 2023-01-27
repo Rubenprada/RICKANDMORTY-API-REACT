@@ -1,7 +1,8 @@
 .form {
   text-align: center;
   padding-top: 164px;
-  height: 600px;
+  height: 580px;
+  width: auto;
   color: antiquewhite;
   background-color: black;
   background-image: url("../../../assets/01740046.jpg");
@@ -17,4 +18,63 @@
 
 .form__label2 {
   padding-right: 5px;
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.form__label1,
+.form__label2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form__label1,
+.form__label2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form__input {
+  width: 160px;
+  height: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.password {
+  width: 160px;
+  height: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=login.css.map */

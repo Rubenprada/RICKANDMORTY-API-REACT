@@ -4,10 +4,10 @@
 }
 
 .home__div {
-  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 750px;
   background-color: black;
 }
 
@@ -16,8 +16,15 @@
   align-items: center;
   justify-content: center;
   width: 50%;
-  margin: auto;
-  margin-top: 200px;
+  margi-bottom: 160px;
+}
+
+img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 30%;
 }
 
 /*# sourceMappingURL=home.css.map *//*# sourceMappingURL=home.css.map */

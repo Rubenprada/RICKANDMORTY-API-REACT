@@ -4,11 +4,24 @@
 
 .user__div_button {
   margin-top: 40px;
-  background-color: rgba(0, 0, 0, 0.911);
+  background-color: #4caf50; /* Green */
+  border: none;
   color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .user__div_div {
-  background-color: rgba(0, 0, 0, 0.911);
+  background-color: rgba(3, 3, 3, 0.911);
   padding-top: 20px;
 }/*# sourceMappingURL=user.css.map */

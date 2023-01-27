@@ -13,6 +13,7 @@ import Footer from './footer/Footer';
 import Error from './error/Error';
 import DetailView from './detailView/DetailView';
 import Back from "./error/Error";
+import Search from '../components/Search/Search';
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/api" element={<CallToApi />} />
       
         <Route path="/api" element={<Back/>} />	
+        <Route path= "/api" element={<Search/>} />
 
         <Route path="/*" element={<Error />} />
       </Routes>

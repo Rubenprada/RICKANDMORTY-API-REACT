@@ -1,4 +1,6 @@
 import React from 'react';
+import './Search.module.scss';
+
 
 
 const Buscador = props => {
@@ -8,10 +10,12 @@ const Buscador = props => {
 	};
 
 	return (
-		
-	<form action="" onSubmit={(ev) => ev.preventDefault()}>
-      <input type="text" placeholder="Rick" onChange={handleChanges} value={props.search} />
+	<>
+	<form className= 'form__busca' action="" onSubmit={(ev) => ev.preventDefault()}>
+      <input className='busca' type="text" placeholder="Rick" onChange={handleChanges} value={props.search} />
     </form>
+	
+	</>
 		
 	);
 };
