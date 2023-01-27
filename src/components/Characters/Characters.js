@@ -9,13 +9,14 @@ import { Link } from "react-router-dom";
 
 
 const Characters = (props) => {
-  console.log(props)
   const { character, info } = props.character;
   let page = props.page;
   console.log(page)
 
   //se define un componente de función llamado "Characters" que recibe props. Dentro del componente, se destructura la propiedad "character" en dos variables: "character" e "info". También se declara una variable "page" que recibe la propiedad "page" de las props.//
+
   
+  const { character, info } = props.character;
   
   const statusCharacter = (status) => {
     if (status === "Alive") {
@@ -37,7 +38,11 @@ const Characters = (props) => {
           <div className="characters">
             {character.map((character, index) => (
               
+
               <div className="character" key={index} id={index} page={page}>
+
+            
+
                 <Link to={`/api/${character.id}`}>
                 
                 <div className="image">

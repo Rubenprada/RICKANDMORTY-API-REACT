@@ -12,10 +12,12 @@ function CallApi() {
   };
   //Declara algunas variables iniciales: urlCharacters, que es la URL base para hacer la llamada a la API, y dataURL, que es un objeto vacío con las propiedades "info", "character" y "error".//
 
+
   const [characters, setCharacters] = useState(dataURL);
   const [ulr, setURL] = useState(urlCharacters);
   const [page, setPage] = useState(1);
   //Utiliza "useState" para crear tres variables de estado: "characters", "ulr" y "page". characters es un objeto con la información de los personajes de la serie, info es un objeto con información adicional sobre la paginación y error es un string vacío. "url" almacena la URL actual para hacer la llamada a la API y "page" almacena el número de página actual.//
+
 
   useEffect(() => {
     const fetchAPI = () => {
@@ -40,6 +42,7 @@ function CallApi() {
     scroll();
   };
 
+
   const prevPage = () => {
     if (characters.info.prev != null) {
       setURL(characters.info.prev);
@@ -48,6 +51,14 @@ function CallApi() {
     }
   };
   //Define las funciones "nextPage" y "prevPage" para cambiar la página de resultados de la API. Estas funciones actualizan la URL almacenada en "ulr" y "page" y llaman a la función "scroll" para desplazarse al comienzo de la página.//
+
+	const nextPage = () => {
+		setURL(characters.info.next);
+		setPage(page + 1);
+		scroll();
+	};
+	
+
 
   const scroll = () => {
     const elemento = document.querySelector(".container");
