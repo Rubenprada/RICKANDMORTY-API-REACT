@@ -6,18 +6,14 @@ import Paginations from "../Paginations/Paginations";
 import { Link } from "react-router-dom";
 
 const Characters = (props) => {
-<<<<<<< HEAD
-  
-  const { character, info } = props.character;
-  
-=======
+
   const { character, info } = props.character;
   let page = props.page;
   console.log(page);
 
   //se define un componente de función llamado "Characters" que recibe props. Dentro del componente, se destructura la propiedad "character" en dos variables: "character" e "info". También se declara una variable "page" que recibe la propiedad "page" de las props.//
 
->>>>>>> origin/master
+
   const statusCharacter = (status) => {
     if (status === "Alive") {
       return <span className="alive">🟢</span>;
@@ -35,26 +31,7 @@ const Characters = (props) => {
         <React.Fragment>
           <div className="characters">
             {character.map((character, index) => (
-<<<<<<< HEAD
-              
-              <div className="character" key={index} id={index} page={page}>
-                <Link to={`/api/${index}${page}`}>
-                
-                <div className="image">
-                  <img className="img" src={character.image} alt={character.name} />
-                </div>
-                <div className="info">
-                  <h2>{character.name}</h2>
-                  <p className="status">
-                    {statusCharacter(character.status)}
-                    {character.status} -{character.species}
-                  </p>
-                  <p className="origin">
-                    Origin:
-                    <span> {character.origin.name}</span>
-                  </p>
-                </div>
-=======
+
               <div className="character" key={index} id={index} page={page}>
                 <Link to={`/api/${character.id}`}>
                   <div className="image">
